@@ -1,0 +1,29 @@
+.parent {
+  padding: 100px;
+  background-color: #523104;
+  text-align: center;
+  position: relative;
+}
+.chi {
+  padding: 100px;
+  text-align: center;
+}
+.cone {
+  background-color:  rgb(109, 101, 11);
+  position: sticky;
+  top: 0px;
+  padding: 20px;
+}
+.ctwo {
+  background-color: rgb(188, 149, 164);
+}
+.cthree {
+  background-color: rgb(13, 0, 255, 0.425);
+}
+.cfour {
+  background-color: rgb(52, 55, 47)
+}
+* {
+  color: white;
+  font-size: 30px;
+}

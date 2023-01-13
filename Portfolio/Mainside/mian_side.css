@@ -1,0 +1,175 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: honeydew;
+}
+
+h1 {
+    font-size: xxx-large;
+}
+
+h2 {
+    font-size: xx-large;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.wrapper #rubrik {
+    background-color: rgb(140, 246, 225);
+    border: rgb(0, 70, 50) solid 1px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/*Du nämnde att vi inte skulle använda id för sent och jag har inte haft tid att ändra det
+jag använder class enbart nästa gång
+*/
+
+.wrapper #row2 {
+    display: flex;
+    flex: 1 1 auto;
+    position: relative;
+}
+
+.wrapper #row2 #menu {
+    border: rgb(0, 70, 50) solid 1px;
+    flex: 0 0 20rem;
+    padding: 1rem;
+    position: sticky;
+    top: 0px;
+
+}
+
+/*The menu will stay on the side when scrolling down due to sticky and the top 0 in the code below*/
+
+#menu {
+    position: sticky;
+    top: 0;
+    width: max-content;
+}
+
+#menu>* {
+    position: relative;
+}
+
+.wrapper #row2 #col2 {
+    flex: 1 1 auto;
+    padding: 1rem;
+}
+
+.parkour {
+    width: 80%;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    border-radius: 100%;
+    background-color: aquamarine;
+    transition: 250ms ease-in;
+}
+
+.parkour a {
+    text-decoration: none;
+}
+
+/* the a specefies that the changes should applie to text
+textdecoration none removes the underscore*/
+
+.parkour:hover {
+    width: 100%;
+    height: 1.7rem;
+    background-color: yellowgreen;
+    margin: 1rem;
+    translate: 10% -5%;
+}
+
+/*i slightly changed the leangth and width to make i stretch
+the backroundcolor changes
+translatre pushes the divider 10% to the side and -5% down (5% upp)*/
+
+.quickacces {
+    width: 80%;
+    height: 3rem;
+    text-align: center;
+    border-radius: 40%;
+    background-color: yellowgreen;
+    border: none;
+    margin-left: 1rem;
+}
+
+.subnav {
+    float: left;
+    overflow: hidden;
+    display: flex;
+    width: 80%;
+    height: 40px;
+}
+
+.subnav:hover .quickacces {
+    color: yellowgreen;
+}
+
+.subnav-content {
+    position: absolute;
+    background-color: yellowgreen;
+    z-index: 1;
+    display: none;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 25%;
+}
+
+/* z index pushes it to be in the front
+position absolute makes it no move*/
+
+
+.mini {
+    height: 80px;
+    width: 100px;
+}
+
+.subnav:hover .subnav-content {
+    display: flex;
+}
+
+
+.creator {
+    float: right;
+    width: 350px;
+    height: 250px;
+    background-color: lightgreen;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: auto;
+    margin-left: 1rem;
+}
+
+/* code to make the image be in the middle*/
+
+.make_me {
+    width: 300px;
+    height: 200px;
+    border-radius: 25px;
+    float: none;
+    margin-left: 0;
+}
+
+
+img {
+    float: right;
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+    margin-left: 1rem;
+    border-radius: 10px;
+}

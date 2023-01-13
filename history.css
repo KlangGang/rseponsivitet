@@ -1,0 +1,186 @@
+:root {
+    --fg-clr-normal: #111;
+    --fg-clr-gray: #3a3a3a;
+    --fg-clr-link: rgb(7, 78, 118);
+    --fg-clr-accent: rgb(0, 166, 255);
+    --fg-clr-white: #fff;
+    
+    --bg-clr-header: rgb(231, 15, 15);
+    --bg-clr-blue: rgb(253, 208, 210);
+    --bg-clr-offwhite: honeydew;
+
+    --line-clr-black: #111;
+
+    --img-width-small: 150px;
+    --img-width-medium: 300px;
+    --img-width-tiny: 50px;
+    --img-width-zoom: 30rem;
+    /* Jag ändrade om lite gran här för att bilderna skulle vara de storlek jag behövde. */
+
+    --padding-tight: .4rem;
+    --padding-normal: 5rem;
+
+    --ft-weight-400: 400;
+    --ft-weight-700: 700;
+}
+
+/* Jag kommer inte ihåg alla ändringar jag gjort men jag sa kommentera på så mycket av det jag gjort som möjligt. */
+
+*,
+*::before,
+*::after {                                            
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: var(--ft-weight-400);
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2.9rem    ;
+}
+
+body {
+    background: var(--bg-clr-offwhite);
+
+}
+
+.header {
+    width: 100%;
+    background: var(--bg-clr-header);
+}
+
+.primary-navigation  {
+    width: 100%;
+    background: var(--bg-clr-blue);
+    height: 3rem;
+    position: sticky;
+    top:0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    /* Jag satte länkarna i mitten och satte z index ett efterom den hamnade bakom texten annars, 
+    sticky och top gör så den följer med*/
+}
+
+.primary-navigation__links {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    width: 60%;
+    margin-inline: auto; 
+
+}
+
+.main-content {
+    width: 60%;
+    margin-inline: auto; 
+    background: var(--bg-clr-offwhite);
+
+} 
+
+
+.footer {
+    background: var(--bg-clr-blue);
+    margin-top: 1rem;
+    /* Margin finns där för att stoppa bilden på att lige precis vid footer. */
+}
+.footer-navigation {
+ margin-left: 3rem;
+ /* länkarna låg för mycket till vänster enligt mig så jag flyttade ut dem */
+}
+
+.inline-image {
+    object-fit: cover;
+}
+
+
+.inline-image-small {
+    width: var(--img-width-small);
+}
+
+.inline-image-medium {
+    width: var(--img-width-medium);
+}
+.noborder {
+    border: none;
+}
+/* Jag tog bort border på en bild då den inte hade en bakgrund. En border gjorde att den stack ut på ett sätt jag ogillade. */
+
+.header-caption {
+    font-weight: var(--ft-weight-700);
+    color: var(--fg-clr-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin-inline: auto; 
+    height: 5rem;
+}
+
+p {
+    padding: var(--padding-tight);
+    color: var(--fg-clr-gray);
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.nav-link {
+    color: var(--fg-clr-link)
+}
+
+.nav-link:visited {
+    color: var(--fg-clr-link)
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+    color: var(--fg-clr-accent);
+}
+.main-content_history {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.main-content__text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+img {
+    transition: 70ms;
+    border: 1px solid black;
+}
+/* Den vita bakgrunden smälter inte ihop med backgrunden på sidan så en border gör skillnaden mindre märkbar. */
+
+
+.inline-image-small:hover {
+    scale: 4;
+    z-index: 2;
+}
+/* Jag ville att bilden skull zomma när man hoverar och att den gör över header  */
+
+.skip-link {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--fg-clr-gray);
+    background-color: var(--bg-clr-blue);
+    translate: 0 -100%;
+    transition: translate 150ms ease-in-out;
+    padding: .75rem;
+    text-decoration: none;
+}
+
+.skip-link:focus,
+.skip-link:hover {
+    color: var(--fg-clr-normal);
+    text-decoration: underline;
+    translate: 0;
+}
+
+/* @media (w){
+    
+} */
