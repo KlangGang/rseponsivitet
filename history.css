@@ -219,6 +219,7 @@ img {
     .main-content__text {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        margin-bottom: 2rem;
     }
 
 
