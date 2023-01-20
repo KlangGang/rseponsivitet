@@ -24,8 +24,6 @@
     --ft-weight-700: 700;
 }
 
-/* Jag kommer inte ihåg alla ändringar jag gjort men jag sa kommentera på så mycket av det jag gjort som möjligt. */
-
 *,
 *::before,
 *::after {                                            
@@ -34,6 +32,7 @@
     margin: 0;
     padding: 0;
     scroll-padding-top: 2.9rem    ;
+
 }
 
 body {
@@ -59,22 +58,6 @@ body {
     sticky och top gör så den följer med*/
 }
 
-.primary-navigation__links {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    list-style: none;
-    width: 60%;
-    margin-inline: auto; 
-
-}
-
-.main-content {
-    width: 60%;
-    margin-inline: auto; 
-    background: var(--bg-clr-offwhite);
-
-} 
 
 
 .footer {
@@ -102,24 +85,11 @@ body {
 .noborder {
     border: none;
 }
-/* Jag tog bort border på en bild då den inte hade en bakgrund. En border gjorde att den stack ut på ett sätt jag ogillade. */
-
-.header-caption {
-    font-weight: var(--ft-weight-700);
-    color: var(--fg-clr-white);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 60%;
-    margin-inline: auto; 
-    height: 5rem;
-}
 
 p {
     padding: var(--padding-tight);
     color: var(--fg-clr-gray);
 }
-
 
 a {
     text-decoration: none;
@@ -137,27 +107,16 @@ a {
     text-decoration: underline;
     color: var(--fg-clr-accent);
 }
-.main-content_history {
-    display: grid;
-    grid-template-columns: auto auto auto;
-}
 
-.main-content__text {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
 img {
     transition: 70ms;
     border: 1px solid black;
 }
-/* Den vita bakgrunden smälter inte ihop med backgrunden på sidan så en border gör skillnaden mindre märkbar. */
-
-
-.inline-image-small:hover {
-    scale: 4;
-    z-index: 2;
+.main-content {
+    display: flex;
+    flex-direction: column;
 }
-/* Jag ville att bilden skull zomma när man hoverar och att den gör över header  */
+
 
 .skip-link {
     position: fixed;
@@ -181,6 +140,115 @@ img {
     translate: 0;
 }
 
-/* @media (w){
+.scale {
+    width: 60%;
+}
+
+@media (max-width: 414px){
+    .header-caption {
+        font-weight: var(--ft-weight-700);
+        font-size: 25px;
+        color: var(--fg-clr-white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 90%;
+        margin-inline: auto; 
+        height: 5rem;
+    }
+    .main-content {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+    .primary-navigation__links {
+        font-size: 10px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style: none;
+        width: 90%;
+        margin-inline: auto; 
     
-} */
+    }
+    
+}
+
+@media (min-width: 414px) and (max-width:1080px) {
+    .header-caption {
+        font-weight: var(--ft-weight-700);
+        color: var(--fg-clr-white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin-inline: auto; 
+        height: 5rem;
+    }
+
+    .main-content {
+        width: 60%;
+        margin-left: 20%;
+        display: flex;
+        justify-content: center;
+        font-size: larger;
+
+    }
+
+    .primary-navigation__links {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style: none;
+        width: 60%;
+        margin-inline: auto; 
+    
+    }
+    .inline-image-small:hover {
+        scale: 2;
+        z-index: 2;
+    }
+}
+
+@media (min-width: 1080px) {
+    
+    .main-content {
+        width: 60%;
+        margin-left: 20%;
+    }
+    
+    .main-content__text {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .header-caption {
+        font-weight: var(--ft-weight-700);
+        color: var(--fg-clr-white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 60%;
+        margin-inline: auto; 
+        height: 5rem;
+    }
+
+    .primary-navigation__links {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        list-style: none;
+        width: 60%;
+        margin-inline: auto; 
+
+    
+    }
+    .inline-image-small:hover {
+        scale: 2;
+        z-index: 2;
+    }
+    .scale {
+        width: 100%;
+    }
+}
+
