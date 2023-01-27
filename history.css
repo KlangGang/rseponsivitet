@@ -144,6 +144,49 @@ img {
     width: 60%;
 }
 
+input, button, textarea {
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+textarea {
+    resize: none;
+}
+
+.message-box {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-clr-blue);
+}
+
+legend {
+    text-align: center;
+    font-weight: bold;
+}
+.btn-send {
+    margin: 2%;
+}
+
+.paperplease {
+    margin-left: 2%;
+    margin-top: 1%;
+}
+
+.inputbox {
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: aliceblue;
+}
+.inputboxspe {
+    margin-left: 2%;
+    margin-right: 2%;
+    background-color: aliceblue;
+    padding-left: 1%;
+    padding-right: 1%;
+    overflow: hidden;
+}
+
+
 @media (max-width: 414px){
     .header-caption {
         font-weight: var(--ft-weight-700);
