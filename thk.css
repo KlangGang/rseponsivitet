@@ -1,0 +1,9 @@
+
+.bop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aquamarine;
+    height: 100vh;
+    
+} 
