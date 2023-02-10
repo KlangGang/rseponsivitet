@@ -4,62 +4,55 @@
 
 body {
     background-color: honeydew;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin: none;
 }
 
 h1 {
-    font-size: xxx-large;
+    font-size: xxlarge;
 }
 
 h2 {
     font-size: xx-large;
 }
-
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+h3 {
+    font-size: medium;
+    font-weight: 400;
 }
 
-.wrapper #rubrik {
+.rubrik {
     background-color: rgb(140, 246, 225);
-    border: rgb(0, 70, 50) solid 1px;
     display: flex;
     justify-content: center;
     position: relative;
+    border: rgb(0, 70, 50) solid 1px;
 }
 
-/*Du nämnde att vi inte skulle använda id för sent och jag har inte haft tid att ändra det
-jag använder class enbart nästa gång
-*/
-
-.wrapper #row2 {
+.row2 {
     display: flex;
     flex: 1 1 auto;
     position: relative;
 }
 
-.wrapper #row2 #menu {
+.menu {
     border: rgb(0, 70, 50) solid 1px;
     flex: 0 0 20rem;
     padding: 1rem;
     position: sticky;
     top: 0px;
-
+    width: max-content;
+    margin-left: 0;
 }
 
 /*The menu will stay on the side when scrolling down due to sticky and the top 0 in the code below*/
 
-#menu {
-    position: sticky;
-    top: 0;
-    width: max-content;
-}
-
-#menu>* {
+.menu>* {
     position: relative;
 }
 
-.wrapper #row2 #col2 {
+.row2, .col2 {
     flex: 1 1 auto;
     padding: 1rem;
 }
@@ -172,4 +165,9 @@ img {
     object-fit: cover;
     margin-left: 1rem;
     border-radius: 10px;
+}
+
+.links {
+    text-decoration: none;
+    color: green;
 }
