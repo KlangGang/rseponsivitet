@@ -32,18 +32,18 @@ h3 {
 
 .row2 {
     display: flex;
-    flex: 1 1 auto;
-    position: relative;
 }
 
 .menu {
     border: rgb(0, 70, 50) solid 1px;
-    flex: 0 0 20rem;
     padding: 1rem;
     position: sticky;
     top: 0px;
-    width: max-content;
-    margin-left: 0;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /*The menu will stay on the side when scrolling down due to sticky and the top 0 in the code below*/
@@ -52,8 +52,7 @@ h3 {
     position: relative;
 }
 
-.row2, .col2 {
-    flex: 1 1 auto;
+.col2 {  
     padding: 1rem;
 }
 
@@ -63,7 +62,7 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1rem;
+    margin: 5%;
     border-radius: 100%;
     background-color: aquamarine;
     transition: 250ms ease-in;
@@ -90,23 +89,23 @@ translatre pushes the divider 10% to the side and -5% down (5% upp)*/
 
 .quickacces {
     width: 80%;
-    height: 3rem;
-    text-align: center;
-    border-radius: 40%;
+    height: 2rem;
+    border-radius: 100%;
     background-color: yellowgreen;
     border: none;
     margin-left: 1rem;
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 250ms ease-in;
 }
 
 .subnav {
-    float: left;
-    overflow: hidden;
     display: flex;
-    width: 80%;
-    height: 40px;
 }
 
-.subnav:hover .quickacces {
+.quickacces:hover .quickacces {
     color: yellowgreen;
 }
 
@@ -117,11 +116,12 @@ translatre pushes the divider 10% to the side and -5% down (5% upp)*/
     display: none;
     margin: 1rem;
     padding: 1rem;
-    border-radius: 25%;
+    border-radius: 15%;
+    transition: 250ms ease-in-out;
 }
 
 /* z index pushes it to be in the front
-position absolute makes it no move*/
+position absolute makes it not move*/
 
 
 .mini {
@@ -129,7 +129,7 @@ position absolute makes it no move*/
     width: 100px;
 }
 
-.subnav:hover .subnav-content {
+.quickacces:hover .subnav-content {
     display: flex;
 }
 
@@ -160,8 +160,8 @@ position absolute makes it no move*/
 
 img {
     float: right;
-    width: 350px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
     margin-left: 1rem;
     border-radius: 10px;
@@ -170,4 +170,8 @@ img {
 .links {
     text-decoration: none;
     color: green;
+}
+
+.col2 {
+    margin-right: 15%;
 }
