@@ -102,15 +102,12 @@ translatre pushes the divider 10% to the side and -5% down (5% upp)*/
     transition: 250ms ease-in;
 }
 
-.subnav {
-    display: flex;
-}
-
 .quickacces:hover .quickacces {
     color: yellowgreen;
 }
 
 .subnav-content {
+    display: flex;
     position: absolute;
     background-color: yellowgreen;
     z-index: 1;
@@ -202,7 +199,6 @@ img {
     background: greenyellow;
     margin-top: auto;
     border: rgb(0, 70, 50) solid 1px;
-    /* Margin finns där för att stoppa bilden på att lige precis vid footer. */
 }
 .footer-navigation {
  margin-left: 3rem;
