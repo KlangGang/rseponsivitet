@@ -31,13 +31,15 @@
     font-weight: var(--ft-weight-400);
     margin: 0;
     padding: 0;
-    scroll-padding-top: 3rem    ;
-
+    scroll-padding-top: 3rem;
 }
 
 body {
     background: var(--bg-clr-offwhite);
-
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 100vh;
 }
 
 html {
@@ -62,11 +64,9 @@ html {
     sticky och top gör så den följer med*/
 }
 
-
-
 .footer {
     background: var(--bg-clr-blue);
-    margin-top: 1rem;
+    margin-top: auto;
     /* Margin finns där för att stoppa bilden på att lige precis vid footer. */
 }
 .footer-navigation {
@@ -119,8 +119,12 @@ img {
 .main-content {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
+.all{
+    position: relative;
+}
 
 .skip-link {
     position: fixed;
@@ -163,6 +167,7 @@ textarea {
     display: flex;
     flex-direction: column;
     background-color: var(--bg-clr-blue);
+    margin-bottom: 1rem;
 }
 
 legend {
@@ -189,7 +194,7 @@ legend {
 }
 
 
-@media (max-width: 400px){
+@media (max-width: 600px){
     .header-caption {
         font-weight: var(--ft-weight-700);
         font-size: 25px;

@@ -8,6 +8,7 @@ body {
     flex-direction: column;
     height: 100vh;
     margin: none;
+    margin: 0;
 }
 
 h1 {
@@ -133,6 +134,27 @@ position absolute makes it not move*/
     display: flex;
 }
 
+.skip-link {
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: black;
+    background-color: greenyellow;
+    translate: 0 -100%;
+    transition: translate 150ms ease-in-out;
+    padding: .75rem;
+    text-decoration: none;
+}
+
+.skip-link:focus,
+.skip-link:hover {
+    color: plum;
+    text-decoration: underline;
+    translate: 0;
+}
 
 .creator {
     float: right;
@@ -174,4 +196,14 @@ img {
 
 .col2 {
     margin-right: 15%;
+}
+
+.footer {
+    background: greenyellow;
+    margin-top: auto;
+    /* Margin finns där för att stoppa bilden på att lige precis vid footer. */
+}
+.footer-navigation {
+ margin-left: 3rem;
+ /* länkarna låg för mycket till vänster enligt mig så jag flyttade ut dem */
 }
