@@ -201,6 +201,7 @@ img {
 .footer {
     background: greenyellow;
     margin-top: auto;
+    border: rgb(0, 70, 50) solid 1px;
     /* Margin finns där för att stoppa bilden på att lige precis vid footer. */
 }
 .footer-navigation {
