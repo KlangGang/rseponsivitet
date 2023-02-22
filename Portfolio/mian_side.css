@@ -1,9 +1,16 @@
+:root {
+    --border: rgb(0, 70, 50) solid 1px;
+    --honey: honeydew;
+    --intrest: aquamarine;
+    --stickout: greenyellow;
+}
+
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    background-color: honeydew;
+    background-color: var(--honey);
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -24,11 +31,11 @@ h3 {
 }
 
 .rubrik {
-    background-color: rgb(140, 246, 225);
+    background-color: var(--intrest);
     display: flex;
     justify-content: center;
     position: relative;
-    border: rgb(0, 70, 50) solid 1px;
+    border: var(--border);
 }
 
 .row2 {
@@ -36,7 +43,7 @@ h3 {
 }
 
 .menu {
-    border: rgb(0, 70, 50) solid 1px;
+    border: var(--border);
     padding: 1rem;
     position: sticky;
     top: 0px;
@@ -45,12 +52,6 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-/*The menu will stay on the side when scrolling down due to sticky and the top 0 in the code below*/
-
-.menu>* {
-    position: relative;
 }
 
 .col2 {  
@@ -65,7 +66,7 @@ h3 {
     align-items: center;
     margin: 5%;
     border-radius: 100%;
-    background-color: aquamarine;
+    background-color: var(--intrest);
     transition: 250ms ease-in;
 }
 
@@ -73,26 +74,19 @@ h3 {
     text-decoration: none;
 }
 
-/* the a specefies that the changes should applie to text
-textdecoration none removes the underscore*/
-
 .parkour:hover {
     width: 100%;
     height: 1.7rem;
-    background-color: yellowgreen;
+    background-color: var(--stickout);
     margin: 1rem;
     translate: 10% -5%;
 }
-
-/*i slightly changed the leangth and width to make i stretch
-the backroundcolor changes
-translatre pushes the divider 10% to the side and -5% down (5% upp)*/
 
 .quickacces {
     width: 80%;
     height: 2rem;
     border-radius: 100%;
-    background-color: yellowgreen;
+    background-color: var(--stickout);
     border: none;
     margin-left: 1rem;
     margin: 5%;
@@ -103,23 +97,23 @@ translatre pushes the divider 10% to the side and -5% down (5% upp)*/
 }
 
 .quickacces:hover .quickacces {
-    color: yellowgreen;
+    color: var(--stickout);
 }
 
 .subnav-content {
     display: flex;
-    position: absolute;
-    background-color: yellowgreen;
+    position: fixed;
+    background-color: var(--stickout);
     z-index: 1;
     display: none;
     margin: 1rem;
     padding: 1rem;
     border-radius: 15%;
     transition: 250ms ease-in-out;
+    bottom: 1rem;
+    left: 2rem;
+    border: var(--border);
 }
-
-/* z index pushes it to be in the front
-position absolute makes it not move*/
 
 
 .mini {
@@ -139,7 +133,7 @@ position absolute makes it not move*/
     right: 0;
     text-align: center;
     color: black;
-    background-color: greenyellow;
+    background-color: var(--stickout);
     translate: 0 -100%;
     transition: translate 150ms ease-in-out;
     padding: .75rem;
@@ -196,11 +190,15 @@ img {
 }
 
 .footer {
-    background: greenyellow;
+    background: var(--stickout);
     margin-top: auto;
-    border: rgb(0, 70, 50) solid 1px;
+    border: var(--border);
 }
 .footer-navigation {
  margin-left: 3rem;
  /* länkarna låg för mycket till vänster enligt mig så jag flyttade ut dem */
+}
+
+html {
+    scroll-behavior: smooth;
 }
