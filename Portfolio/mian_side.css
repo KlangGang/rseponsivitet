@@ -117,8 +117,8 @@ h3 {
 
 
 .mini {
-    height: 80px;
-    width: 100px;
+    height: 5rem;
+    width: 5rem;
 }
 
 .quickacces:hover .subnav-content {
@@ -160,8 +160,6 @@ h3 {
     margin-left: 1rem;
 }
 
-/* code to make the image be in the middle*/
-
 .make_me {
     width: 300px;
     height: 200px;
@@ -173,11 +171,9 @@ h3 {
 
 img {
     float: right;
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
     margin-left: 1rem;
     border-radius: 10px;
+    width: 10rem;
 }
 
 .links {
@@ -196,9 +192,21 @@ img {
 }
 .footer-navigation {
  margin-left: 3rem;
- /* länkarna låg för mycket till vänster enligt mig så jag flyttade ut dem */
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+.hiding {
+    border: var(--border);
+    margin: 1%;
+    padding: 1%;
+    box-shadow: 0.4rem 0.4rem 0.4rem rgb(0, 70, 50);
+}
+
+.griddy {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
 }
